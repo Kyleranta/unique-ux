@@ -26,21 +26,6 @@ const headings = post.getHeadings();
                 <h1>{title}</h1>
         </div>
         <aside class="padding-16">
-            <div class="rounded-corners">
-                <div class="margin-bottom-16">
-                    <p>
-                        TABLE OF CONTENTS
-                    </p>
-                    <div class="label-medium"></div>
-                    {headings.slice(0,8).map((heading) => (
-                        heading.depth == 2 &&
-                            <a class="label-small" href={`#${heading.slug}`}>{heading.text}</a>
-                        <br/>
-                    ))}
-                </div>
-            </div>
-            <div class="line"></div>
-            <br>
             <a class="label-small" href="/blog">All Articles</a>
         </aside>
 

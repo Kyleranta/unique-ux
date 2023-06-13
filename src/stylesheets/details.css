@@ -9,10 +9,11 @@ summary {
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: .8px;
-    background: var(--medium);
+    background: var(--dark);
     padding-left: 1rem;
     position: relative;
     cursor: pointer;
+    margin-bottom: .75rem;
   }
 
   details {
@@ -20,7 +21,7 @@ summary {
     box-sizing: border-box;
     margin-top: 5px;
     margin-bottom: .5rem;
-    background: var(--medium);
+    background: var(--dark);
   }
 
   .details-container {

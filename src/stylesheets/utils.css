@@ -6,10 +6,10 @@ ul {
 }
 
 li {
-    margin-block: 16px;
-    background-color: var(--medium);
+    margin-block: 4px;
+    background-color: var(--dark);
     padding-inline: 16px;
-    padding-block: 8px;
+    padding-block: 4px;
 }
 
 .last-input {
