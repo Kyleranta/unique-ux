@@ -25,7 +25,6 @@ level: beginner
 7. [Collaborative Design](#collaborative-design)
 
 <br>
-<br>
 <details>
   <summary>1. What is an IA Framework?</summary>
 
