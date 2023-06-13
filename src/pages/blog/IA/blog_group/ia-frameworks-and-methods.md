@@ -76,11 +76,13 @@ IA methods provide a practical and systematic approach to create effective infor
   <summary>3. Card Sorting</summary>
 
   <!-- Content for "Card Sorting" -->
-## What is Card Sorting?
+## Card Sorting
+
+### What is Card Sorting?
 
 Card sorting is a user-centered technique that involves organizing information or concepts into categories based on how users perceive their relationships. It helps IA professionals gain insights into users' mental models and preferences, facilitating the creation of intuitive information structures. Participants are given a set of cards, each representing a piece of content or concept, and are asked to group the cards in a way that makes sense to them. The resulting categorization provides valuable data for designing effective navigation systems and content organization.
 
-## Benefits of Card Sorting
+### Benefits of Card Sorting
 
 Card sorting offers several benefits for IA professionals and website designers. It allows you to:
 
