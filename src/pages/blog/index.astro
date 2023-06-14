@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Difficulty from "../../components/Difficulty.astro"
 import BlogNav from '../../components/Blog/BlogNav.astro'
+import IndexHead from '../../components/Index_head.astro'
 
 const posts = await Astro.glob("../blog/IA/blog_group/*.md");
 
@@ -14,15 +15,9 @@ const video_url = "https://www.youtube.com/embed/a5Ai9mNXYcA";
 const groupId = 'blog'
 ---
 
-<Layout title="Blog">
-  <header class="main">
-    <section class="hero-container">
-       <div class="title-large margin-bottom-8">UX Unboxed</div>
-      <div class="subtitle margin-top-16">
-        Where Art and Technology Converge
-      </div>
-    </section>
-  </header>
+<Layout title="Ux Unboxed | Blog">
+  <IndexHead />
+
     <div class="row blog-main">
       <div class="col-sm-8 col-12 blog-lists">
         <article class="difficulty order-3 order-md-1">
