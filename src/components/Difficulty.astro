@@ -13,6 +13,7 @@
   </ul>
 </div>
 
+
 <style>
   /* New */
   .difficulty-switcher-container {
@@ -78,3 +79,42 @@
     cursor: pointer;
   }
 </style>
+
+<script type="module">
+  // Astro will run this script once the component has been loaded into the browser
+  import { onMount } from 'svelte';
+
+  onMount(() => {
+    let touchStartX = null;
+
+    // Save the touch start position
+    document.querySelector('.difficulty-switcher-container').addEventListener('touchstart', function(event) {
+      touchStartX = event.touches[0].clientX;
+    });
+
+    // React to the touch move event
+    document.querySelector('.difficulty-switcher-container').addEventListener('touchmove', function(event) {
+      if (touchStartX === null) {
+        return;
+      }
+
+      let touchEndX = event.changedTouches[0].clientX;
+
+      // Calculate the swipe direction
+      let diffX = touchStartX - touchEndX;
+
+      // Dispatch new click events based on swipe direction
+      if (Math.abs(diffX) > 100) { // Avoid small swipes
+        if (diffX > 0) {
+          // Swiped left
+          document.querySelector('.nav-link.active').parentElement.nextElementSibling?.children[0].click();
+        } else {
+          // Swiped right
+          document.querySelector('.nav-link.active').parentElement.previousElementSibling?.children[0].click();
+        }
+      }
+
+      touchStartX = null;
+    });
+  });
+</script>
