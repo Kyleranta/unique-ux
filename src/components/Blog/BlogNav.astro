@@ -3,27 +3,32 @@ const navs = [
   {
     title: "IA",
     id: "IA",
-    href: "/blog/IA"
+    href: "/blog/IA",
+    tooltip: "Information Architecture"
   },
   {
     title: "AI",
     id: "AI",
-    href: "/blog/AI"
+    href: "/blog/AI",
+    tooltip: "Artificial Intelligence"
   },
   {
     title: "UX",
     id: "UX",
-    href: "/blog/UX"
+    href: "/blog/UX",
+    tooltip: "User Experience"
   },
   {
     title: "UI",
     id: "UI",
-    href: "/blog/UI"
+    href: "/blog/UI",
+    tooltip: "User Interface"
   },
   {
     title: "</>",
     id: "MEDIA",
-    href: "/blog/MEDIA"
+    href: "/blog/MEDIA",
+    tooltip: "Media"
   },
 ]
 
@@ -33,10 +38,13 @@ const { active } = Astro.props;
 <div class="blog-nav">
   {
     navs.map((nav) => (
-      active === nav.id ? <a class="nav-item active" href={nav.href}>{nav.title}</a> : <a class="nav-item"  href={nav.href}>{nav.title}</a>
+      active === nav.id 
+      ? <a class="nav-item active" href={nav.href} title={nav.tooltip}>{nav.title}</a> 
+      : <a class="nav-item"  href={nav.href} title={nav.tooltip}>{nav.title}</a>
     ))
   }
 </div>
+
 
 <style>
   .blog-nav {
@@ -59,10 +67,11 @@ const { active } = Astro.props;
     font-weight: 800;
     color: #FFFFFF80;
     cursor: pointer;
+    transition: .6s; /* Add transition for smoother color change */
   }
-  .nav-item:hover {
-    color: #FFFFFF;
-    transition: .6s;
+  .nav-item:hover,
+  .nav-item:focus { /* Add focus selector */
+    color: #4A90D9; /* Change to neon blue */
   }
   .nav-item:first-child {
     margin-left: 0px !important;
@@ -83,3 +92,4 @@ const { active } = Astro.props;
     }
   }
 </style>
+

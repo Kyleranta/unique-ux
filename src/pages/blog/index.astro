@@ -11,7 +11,7 @@ const advancedPosts = posts.filter(item => item.frontmatter.level == 'advanced')
 
 const video_url = "https://www.youtube.com/embed/a5Ai9mNXYcA";
 
-const groupId = 'IA'
+const groupId = 'blog'
 ---
 
 <Layout title="Blog">
@@ -23,36 +23,14 @@ const groupId = 'IA'
       </div>
     </section>
   </header>
+  <div class="instruction">
+    First, select a topic from the navigation below:
+  </div>
     <div class="row blog-main">
       <div class="col-sm-8 col-12 blog-lists">
         <article class="difficulty order-3 order-md-1">
           <BlogNav active={ groupId }/>
-        </article>  
-        <article class="difficulty order-2 order-md-2">
-          <Difficulty />
-        </article>
-        <div class="tab-content order-1 order-md-3" id="pills-tabContent">
-          <div id="pills-beginner" class="tab-pane fade show active">
-            {
-              
-            }
-          </div>
-          <div id="pills-intermediate" class="tab-pane fade">
-            {
-              
-            }
-          </div>
-          <div id="pills-advanced" class="tab-pane fade">
-            {
-
-            }
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4 col-12 blog-video-box">
-        <iframe class="blog-video" width="300" height="635" src={video_url}></iframe>
-      </div>
-    </div>
+        </article>      
 </Layout>
 
 <style>

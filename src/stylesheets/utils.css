@@ -1,3 +1,7 @@
+.instruction {
+    color: white;
+  }
+
 ul {
     font-size: .875rem;
     color: white;
@@ -7,6 +11,7 @@ ul {
 
 li {
     margin-block: 4px;
+    color: var(--yellow);
     background-color: var(--dark);
     padding-inline: 16px;
     padding-block: 4px;
